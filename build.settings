@@ -18,8 +18,8 @@ settings =
 	excludeFiles =
 	{
 		-- Include only the necessary icon files on each platform
-		iphone = { "Icon-*dpi.png", },
-		android = { "Icon.png", "Icon-Small-*.png", "Icon*@2x.png", },
+		iphone = { "\Images\defaultImages\Icon-*dpi.png", },
+		android = { "\Images\defaultImages\Icon.png", "\Images\defaultImages\Icon-Small-*.png", "\Images\defaultImages\Icon*@2x.png", },
 	},
 
 	--
@@ -35,22 +35,22 @@ settings =
 
 			CFBundleIconFiles =
 			{
-				"Icon.png",
-				"Icon@2x.png",
-				"Icon-60.png",
-				"Icon-60@2x.png",
-				"Icon-60@3x.png",
-				"Icon-72.png",
-				"Icon-72@2x.png",
-				"Icon-76.png",
-				"Icon-76@2x.png",
-				"Icon-Small.png",
-				"Icon-Small@2x.png",
-				"Icon-Small@3x.png",
-				"Icon-Small-40.png",
-				"Icon-Small-40@2x.png",
-				"Icon-Small-50.png",
-				"Icon-Small-50@2x.png",
+				"\Images\defaultImages\Icon.png",
+				"\Images\defaultImages\Icon@2x.png",
+				"\Images\defaultImages\Icon-60.png",
+				"\Images\defaultImages\Icon-60@2x.png",
+				"\Images\defaultImages\Icon-60@3x.png",
+				"\Images\defaultImages\Icon-72.png",
+				"\Images\defaultImages\Icon-72@2x.png",
+				"\Images\defaultImages\Icon-76.png",
+				"\Images\defaultImages\Icon-76@2x.png",
+				"\Images\defaultImages\Icon-Small.png",
+				"\Images\defaultImages\Icon-Small@2x.png",
+				"\Images\defaultImages\Icon-Small@3x.png",
+				"\Images\defaultImages\Icon-Small-40.png",
+				"\Images\defaultImages\Icon-Small-40@2x.png",
+				"\Images\defaultImages\Icon-Small-50.png",
+				"\Images\defaultImages\Icon-Small-50@2x.png",
 			},
 
 			--[[

@@ -34,19 +34,6 @@ physics.setAverageCollisionPositions(true);
 
 local numericField = native.newTextField(display.contentWidth / 2, display.contentHeight / 4, display.contentWidth/5, 36 );
 
---create button for user to hit when ready to random
---[[] REMOVED, NOW SHAKES CAUSE A NUMBER TO FALL
-local ranButton = widgets.newButton(
-                {
-                    label = "Random Winner!", 
-                    x = display.contentWidth / 2.75, 
-                    y = display.contentHeight / 5
-                    
-                    
-                });
-]]
-                
-                
 --set some default values for the number input field
 numericField.placeholder = "(#)";
 numericField.inputType = "number";
@@ -184,23 +171,6 @@ end
 --event handlers
 --button
 getRandomNumber = function( event )
-    
-    --block used for testing with buttons in place of accelerometer
-    --[[]
-    if (event.phase == "began" and getDeltaTime() > 0.5) then
-        
-        local oneRandom = math.random(1, tonumber(numericField.text) or 42);
-        
-        local tries = 0;
-        while(IsPicked(oneRandom) ~= 0 and tries < 500) do
-            
-            oneRandom = math.random(1, tonumber(numericField.text) or 42);
-            tries = tries + 1;
-        end
-        
-        spawnController("start", spawnParams, oneRandom);
-    end
-    ]]
     
     if event.isShake and getDeltaTime() > 0.5 then
         
