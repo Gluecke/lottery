@@ -88,14 +88,20 @@ local runTime = 0;
 --logo image
 local logo = display.newImage("Images/Logo.png", display.contentWidth/2, display.contentHeight - display.contentHeight / 2.5);
 
-
+--functions
+local spawnNumber;
+local spawnController;
+local getDeltaTime;
+local IsPicked;
+local getRandomNumber;
+local resetNumberList;
 -----------------------[[
 --functions
 -----------------------]]
 
 
 --spawning function
-local function spawnNumber( bounds, oneRandom)
+spawnNumber = function( bounds, oneRandom)
     local item = display.newText(
                 {
                     text = "1",
@@ -132,7 +138,7 @@ local function spawnNumber( bounds, oneRandom)
 end
 
 --spawn controller
-local function spawnController (action, params, oneRandom)
+spawnController = function (action, params, oneRandom)
     if(action == "start")
         then
         --gather spawning bounds
@@ -149,7 +155,7 @@ end
 
 
 --Returns delta time since last shake
-local function getDeltaTime()
+getDeltaTime = function()
     local curTime = system.getTimer();
     local dTime = (curTime-runTime) / 1000;
     runTime = curTime;
@@ -158,7 +164,7 @@ end
 
 
 --check if number is already used
-local function IsPicked(wasPicked)
+IsPicked = function(wasPicked)
     local isPicked = 0;
         
         for idx = 1, #spawnedNumbers do
@@ -177,7 +183,7 @@ end
 
 --event handlers
 --button
-local function getRandomNumber( event )
+getRandomNumber = function( event )
     
     --block used for testing with buttons in place of accelerometer
     --[[]
@@ -211,7 +217,7 @@ local function getRandomNumber( event )
     end
 end
 
-local function resetNumberList( event )
+resetNumberList = function( event )
     if (event.phase == "began") then
         for num = 1, #spawnedNumbers do
         spawnedNumbers[num]:removeSelf();
